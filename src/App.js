@@ -40,7 +40,7 @@ function App() {
             <h5 className="card-title">Stopwatch</h5>
 
             <p className="card-text">
-              Time : {minutes}:{seconds < 10 ? `0${seconds}` : `${seconds}`}
+              Time: {minutes}:{seconds < 10 ? `0${seconds}` : `${seconds}`}
             </p>
             <button className="btn btn-sm btn-success ml-5" onClick={startStop}>
               {isStart ? "Stop" : "Start"}
