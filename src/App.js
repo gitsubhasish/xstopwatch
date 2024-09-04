@@ -9,10 +9,10 @@ function App() {
   useEffect(() => {
     let timerId;
     if (isStart) {
-      timerId = setInterval(() => setTime(time + 1), 1000);
+      timerId = setInterval(() => setTime((prev) => prev + 1), 1000);
     }
     return () => clearInterval(timerId);
-  }, [isStart, time]);
+  }, [isStart]);
 
   const minutes = Math.floor(time / 60);
   const seconds = Math.floor(time % 60);
